@@ -62,7 +62,7 @@ export const authOptions: NextAuthOptions = {
         // Check if the user exists in the database
         const user = await prisma.user.findUnique({
           where: {
-            email: credentials.email,
+            email: credentials?.email,
           },
         });
   
